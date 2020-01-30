@@ -11,8 +11,7 @@ class OwnersController < ApplicationController
 
   post '/owners' do 
     @owner = Owner.create(params["owner"])
-    
-    binding.pry
+    @owner.pets
   end
 
   get '/owners/:id/edit' do 
